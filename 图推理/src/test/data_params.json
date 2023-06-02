@@ -1,0 +1,187 @@
+{
+  "kg_name": "452120393941295104",
+  "alpha": 0.85,
+  "max_iter": 100,
+  "topk": 8,
+  "graph_rules": {
+    "entities": [
+      {
+        "type": "ENTITY",
+        "type_id": "12334621",
+        "weight_subject_to": [
+          0.8
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "type": "RELATION",
+        "relation_id": "驶入",
+        "start_type_id": "1345631",
+        "end_type_id": "13485411231",
+        "weight_subject_to": [
+          0.6666666666
+        ]
+      },
+      {
+        "type": "EVENT",
+        "relation_id": "e2",
+        "start_type_id": "13463445213",
+        "end_type_id": "146213155453",
+        "weight_subject_to": [
+          0.0
+        ]
+      }
+    ],
+    "attributes": [
+      {
+        "type": "ENTITY",
+        "type_id": "HM",
+        "attribute_id": "hm-chishuishendu",
+        "value_type": "NUMERICAL",
+        "rule": "ASCENDING",
+        "rule_subject_to": [],
+        "weight_subject_to": [
+          0,
+          1
+        ]
+      },
+       {
+        "type": "RELATION",
+        "type_id": "驶入",
+        "attribute_id": "e-b",
+        "value_type": "NUMERICAL",
+        "rule": "GT",
+        "rule_subject_to": [
+          10
+        ],
+        "weight_subject_to": [
+          0.9
+        ]
+      }
+      ,
+
+      {
+        "type": "ENTITY",
+        "type_id": "HM",
+        "attribute_id": "hm-chishuishendu",
+        "value_type": "NUMERICAL",
+        "rule": "DESCENDING",
+        "rule_subject_to": [],
+        "weight_subject_to": [
+          0,
+          1
+        ]
+      },
+      {
+        "type": "ENTITY",
+        "type_id": "HM",
+        "attribute_id": "hm-gouzaoshijian",
+        "value_type": "NUMERICAL",
+        "rule": "BETWEEN",
+        "rule_subject_to": [
+          19960202,
+          19980212
+        ],
+        "weight_subject_to": [
+          0.8
+        ]
+      },
+      {
+        "type": "ENTITY",
+        "type_id": "480318595559366656",
+        "attribute_id": "480400114604875776",
+        "value_type": "CHARACTER",
+        "rule": "EQ",
+        "rule_subject_to": [
+          "30"
+        ],
+        "weight_subject_to": [
+          0.8
+        ]
+      },
+      {
+        "type": "ENTITY",
+        "type_id": "HM",
+        "attribute_id": "hm-guojia",
+        "value_type": "CHARACTER",
+        "rule": "ASCENDING",
+        "rule_subject_to": [
+          "美国",
+          "韩国",
+          "日本",
+          "中国"
+        ],
+        "weight_subject_to": [
+          0.4,
+          1.0
+        ]
+      },
+      {
+        "type": "RELATION",
+        "type_id": "驶入",
+        "attribute_id": "e-b",
+        "value_type": "NUMERICAL",
+        "rule": "GT",
+        "rule_subject_to": [
+          10
+        ],
+        "weight_subject_to": [
+          0.9
+        ]
+      },
+      {
+        "type": "RELATION",
+        "type_id": "驻扎",
+        "attribute_id": "e-b",
+        "value_type": "NUMERICAL",
+        "rule": "BETWEEN",
+        "rule_subject_to": [
+          1,
+          10
+        ],
+        "weight_subject_to": [
+          0.66
+        ]
+      },
+      {
+        "type": "RELATION",
+        "type_id": "驶入",
+        "attribute_id": "e-c",
+        "value_type": "CHARACTER",
+        "rule": "CONTAINS",
+        "rule_subject_to": [
+          "d"
+        ],
+        "weight_subject_to": [
+          0.9888888
+        ]
+      },
+      {
+        "type": "EVENT",
+        "type_id": "SJ",
+        "attribute_id": "sj-shijian",
+        "value_type": "NUMERICAL",
+        "rule": "DESCENDING",
+        "rule_subject_to": [],
+        "weight_subject_to": [
+          0,
+          1
+        ]
+      },
+      {
+        "type": "EVENT",
+        "type_id": "SJ",
+        "attribute_id": "sj-shijian",
+        "value_type": "NUMERICAL",
+        "rule": "EQ",
+        "rule_subject_to": [
+          20100215
+        ],
+        "weight_subject_to": [
+          0.95
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "ip": "120.46.152.174",
+  "port": 38069,
+  "user": "root",
+  "password": "123456"
+}
+
+{
+  "ip": "graphd.pie-engine-nebula.svc.cluster.local",
+  "port": 38069,
+  "user": "root",
+  "password": "123456"
+}

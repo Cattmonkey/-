@@ -1,0 +1,220 @@
+{
+  "kg_name": "452120393941295104",
+  "alpha": 0.85,
+  "max_iter": 100,
+  "topk": 8,
+  "return_node_type": {
+    "entity_type_ids": [],
+    "event_type_ids": []
+  },
+  "graph_rules": {
+    // entities 暂时保留
+    "entities": [
+      {
+        "type": "ENTITY",
+        // 如航空母舰
+        "type_id": "12334621",
+        // 实体的权重属性赋值，必须 0-1之间
+        "weight_subject_to": [
+          0.8
+        ]
+      }
+    ],
+    // 关系重要性配置
+    "relations": [
+      {
+        "type": "ENTITY",
+        // 如：航空母舰与地区之间的部署关系的id
+        "relation_id": "e1",
+        // 如：航空母舰
+        "start_type_id": "1345631",
+        // 如：地区
+        "end_type_id": "13485411231",
+        // 关系的权重属性赋值，必须 0-1之间
+        "weight_subject_to": [
+          0.6
+        ]
+      },
+      {
+        "type": "EVENT",
+        // 如：演习事件与参演航母的关系id
+        "relation_id": "e2",
+        // 如xxx军事演习事件id
+        "start_type_id": "13463445213",
+        // 如参演航母id，
+        "end_type_id": "146213155453",
+        // //关系的权重属性赋值，必须 0-1之间
+        "weight_subject_to": [
+          0.0
+        ]
+      }
+    ],
+    // 属性重要性配置，包含实体属性，关系的属性，事件的属性
+    "attributes": [
+      {
+        "type": "ENTITY",
+        // 如：航空母舰的id
+        "type_id": "HM",
+        // 如航空母舰的排水量id
+        "attribute_id": "hm-paishuiliang",
+        // 如 数值型
+        "value_type": "NUMERICAL",
+        "rule": "ASCENDING",
+        // 约束区间
+        "rule_subject_to": [],
+        // 约束区间，必须 0-1之间
+        "weight_subject_to": [
+          0,
+          1
+        ]
+      },
+      {
+        "type": "RELATION",
+        "type_id": "驶入",
+        "attribute_id": "时间",
+        // 如 数值型
+        "value_type": "NUMERICAL",
+        "rule": "DESCENDING",
+        // 约束区间
+        "rule_subject_to": [],
+        // 约束区间
+        "weight_subject_to": [
+          0,
+          1
+        ]
+      },
+      {
+        "type": "EVENT",
+        // 如，xxx军事演习事件id
+        "type_id": "12132312",
+        // 如：演习时间id
+        "attribute_id": "paishuiliang",
+        // 如 数值型
+        "value_type": "NUMERICAL",
+        "rule": "DESCENDING",
+        "rule_subject_to": [],
+        // 约束区间
+        "weight_subject_to": [
+          0.5,
+          1.0
+        ]
+      },
+      {
+        "type": "ENTITY",
+        // 如：航空母舰的id
+        "type_id": "111215",
+        // 如航空母舰的键长id
+        "attribute_id": "hm-chishuishendu",
+        // 如 数值型
+        "value_type": "NUMERICAL",
+        "rule": "BETWEEN",
+        // 约束区间
+        "rule_subject_to": [
+          17,
+          20
+        ],
+        // 属性权重约束区间
+        "weight_subject_to": [
+          0.8
+        ]
+      },
+      {
+        "type": "ENTITY",
+        "type_id": "232132321",
+        // 如：航空母舰的id
+        "attribute_id": "121223235",
+        // 如航空母舰的键长id
+        "value_type": "NUMERICAL",
+        // 如 数值型
+        "rule": "GT",
+        // EQ，LT，GT，LEQ，GEQ 同理
+        "rule_subject_to": [
+          100
+        ],
+        // 约束区间
+        "weight_subject_to": [
+          0.9
+        ]
+      },
+      // 以下是字符型
+      {
+        "type": "ENTITY",
+        "type_id": "232132321",
+        // 如：航空母舰的id
+        "attribute_id": "121223235",
+        // 如航空母舰的级别id
+        "value_type": "CHARACTER",
+        // 如 字符型
+        "rule": "ASCENDING",
+        // 升序
+        "rule_subject_to": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        // 值约束区间
+        "weight_subject_to": [
+          0.8,
+          1.0
+        ]
+      },
+      {
+        "type": "ENTITY",
+        // 如：航空母舰的id
+        "type_id": "232132321",
+        // 如航空母舰的级别id
+        "attribute_id": "121223235",
+        // 如 字符型
+        "value_type": "CHARACTER",
+        // 等于
+        "rule": "EQ",
+        // 值约束区间
+        "rule_subject_to": [
+          "尼米兹级"
+        ],
+        "weight_subject_to": [
+          0.8
+        ]
+      },
+      {
+        "type": "ENTITY",
+        // 如：航空母舰的id
+        "type_id": "232132321",
+        // 如航空母舰的级别id
+        "attribute_id": "121223235",
+        // 如 字符型
+        "value_type": "CHARACTER",
+        // 包含
+        "rule": "CONTAINS",
+        // 值约束区间
+        "rule_subject_to": [
+          "尼米兹"
+        ],
+        "weight_subject_to": [
+          0.8
+        ]
+      },
+      {
+        "type": "ENTITY",
+        // 如：航空母舰的id
+        "type_id": "232132321",
+        // 如航空母舰的级别id
+        "attribute_id": "121223235",
+        // 如 字符型
+        "value_type": "CHARACTER",
+        // 被包含
+        "rule": "IN",
+        // 值约束区间
+        "rule_subject_to": [
+          "尼米兹级",
+          "企业级",
+          "金刚级"
+        ],
+        "weight_subject_to": [
+          0.9
+        ]
+      }
+    ]
+  }
+}

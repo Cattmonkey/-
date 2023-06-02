@@ -1,0 +1,24 @@
+ {
+        "type": "RELATION",
+        "type_id": "驶入",
+        "attribute_id": "e-time",
+        "value_type": "NUMERICAL",
+        "rule": "ASCENDING",
+        "rule_subject_to": [],
+        "weight_subject_to": [
+          0,
+          1
+        ]
+      },
+            {
+        "type": "RELATION",
+        "type_id": "驶入",
+        "attribute_id": "e-a",
+        "value_type": "NUMERICAL",
+        "rule": "DESCENDING",
+        "rule_subject_to": [],
+        "weight_subject_to": [
+          0,
+          1
+        ]
+      },
